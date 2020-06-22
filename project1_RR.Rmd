@@ -173,11 +173,9 @@ levels(a8.1$WDWE)<-c("Weekend","Weekday")
 
 a8.1$interval<-as.numeric(as.character(a8.1$interval))
 
-
 library(hexbin)
 
 ggplot(a8.1, aes(interval, Steps))+ stat_binhex(na.rm = TRUE) + theme(aspect.ratio = 1)+facet_wrap(~ WDWE)
 
 dev.copy(png,"plot8.png")
-
 dev.off()
