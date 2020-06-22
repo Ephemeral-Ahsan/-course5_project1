@@ -29,10 +29,9 @@ str(activity)
 sum(is.na(activity$steps))
 
 ##transforming the date column into date format
-
+install.packages("lubridate")
 library(lubridate)
 activity$date<-ymd(activity$date)
-
 
 ##or,
 activity$date<- as.Date(activity$date, format = "%Y-%m-%d")
